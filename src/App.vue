@@ -2,7 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <svg class="icon">
-        <use xlink:href="sprite.svg#organic"></use>
+        <use v-bind="{'xlink:href': `/sprite.svg#${icon}`}"></use>
     </svg>
     <router-view/>
   </div>
@@ -15,6 +15,7 @@ export default {
   name: 'App',
   data () {
     return {
+      icon: 'organic'
     //   symbolData
     }
   }
